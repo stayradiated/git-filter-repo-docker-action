@@ -24,5 +24,6 @@ runs:
     TARGET_ORG: ${{ inputs.targetOrg }}
     TARGET_REPO: ${{ inputs.targetRepo }}
     TARGET_BRANCH: ${{ inputs.targetBranch }}
+    LAST_COMMIT_MESSAGE: ${{ github.event.head_commit.message }}
   args:
     - ${{ inputs.filterArguments }}
