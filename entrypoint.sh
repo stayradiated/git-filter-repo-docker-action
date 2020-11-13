@@ -16,4 +16,4 @@ fi
 eval "set -- ${1}"
 git-filter-repo "${@}"
 
-git push "${use_force}" "git@github.com:${TARGET_ORG}/${TARGET_REPO}.git" HEAD:"${TARGET_BRANCH}"
+git push "git@github.com:${TARGET_ORG}/${TARGET_REPO}.git" HEAD:"${TARGET_BRANCH}" "${use_force}"
