@@ -6,8 +6,8 @@ ssh-keyscan -t rsa github.com >> /etc/ssh/ssh_known_hosts
 eval `ssh-agent -s`
 ssh-add - <<< "${SSH_PRIVATE_KEY}"
 
-local last_commit_log=$(git log -1 --pretty=format:"%s")
-local use_force=""
+last_commit_log=$(git log -1 --pretty=format:"%s")
+use_force=""
 if [[ "${last_commit_log}" == *"[force]"* ]]; then
   use_force="--force"
 fi
