@@ -1,4 +1,5 @@
 # git-filter-repo-docker-action
+
 A GitHub Docker Action to run git-filter-repo and push the result to a GitHub repository using ssh
 
 This repo contains a github action to trigger a custom git-repo-filter command.
@@ -7,6 +8,7 @@ It is designed to be run on pushes to the main or master branch of a repository
 and to then push the resulting filtered repo to another remote using an ssh key.
 
 # Example Workflow
+
 ```
 name: CI
 on:
@@ -21,7 +23,7 @@ jobs:
       with:
         fetch-depth: 0
     - name: git-filter-repo
-      uses: wmde/git-filter-repo-docker-action@v1
+      uses: stayradiated/git-filter-repo-docker-action@v2
       with:
         privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
         targetOrg: wikimedia
